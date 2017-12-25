@@ -28,10 +28,15 @@ class SearchData extends Component {
 
   render() {
     const {searchDetails} = this.props;
-    let {data} = searchDetails;
+    const {data} = searchDetails;
+    const noDataFound = _.isEmpty(data);
     return (
       <div className="search-data">
         {
+          noDataFound?
+          <div className="no-data">
+            No data is there
+          </div>:
           _.map(data, (item, key) => {
             const {id} = item;
             const {videoId, channelId, kind} = id;

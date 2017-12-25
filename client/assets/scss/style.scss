@@ -33,6 +33,14 @@ h1 {
   margin: auto;
 	width: 50%;
   padding: 20px 0;
+  .no-data {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-style: italic;
+    color: #657383;
+    width: 85%;
+  }
   .img-container {
     .img-channel {
       border-radius: 50%;
